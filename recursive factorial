@@ -1,0 +1,15 @@
+fn factorial(n: u64) -> u64 {
+    if n == 0 {
+        // Base case: The factorial of 0 is 1.
+        1
+    } else {
+        // Recursive case: n! = n * (n-1)!
+        n * factorial(n - 1)
+    }
+}
+
+fn main() {
+    let n = 5; // Change this to the desired integer for which you want to calculate the factorial.
+    let result = factorial(n);
+    println!("Factorial of {} is: {}", n, result);
+}
