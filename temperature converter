@@ -1,0 +1,26 @@
+use std::io;
+
+fn main() {
+    println!("Enter the temperature value:");
+    let mut temperature = String::new();
+    io::stdin().read_line(&mut temperature).expect("Failed to read input");
+
+    let temperature: f32 = temperature.trim().parse().expect("Invalid input. Please enter a numeric value.");
+
+   
+    println!("Enter the scale (C for Celsius or F for Fahrenheit):");
+    let mut scale = String::new();
+    io::stdin().read_line(&mut scale).expect("Failed to read input");
+
+    let converted_temperature = match scale.trim() {
+        "C" | "c" => (temperature * 9.0 / 5.0) + 32.0, // Celsius to Fahrenheit
+        "F" | "f" => (temperature - 32.0) * 5.0 / 9.0, // Fahrenheit to Celsius
+        _ => {
+            println!("Invalid scale. Please enter 'C' for Celsius or 'F' for Fahrenheit.");
+            return;
+        }
+    };
+    
+    println!("Converted temperature: {:.2}", converted_temperature);
+
+}
