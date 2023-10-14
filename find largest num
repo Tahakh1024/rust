@@ -1,0 +1,20 @@
+fn find_largest(arr: &[i32]) -> i32 {
+
+    let mut largest = arr[0];
+
+    for &num in arr.iter() {
+        if num > largest {
+            largest = num;
+        }
+    }
+
+    largest
+}
+
+fn main() {
+  let nums = [34, -5, 6, 12, 0];
+
+  let max = find_largest(&nums);
+
+  println!("The largest number is {}", max);
+}
