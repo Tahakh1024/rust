@@ -1,0 +1,1 @@
+/workspaces/rust/first_project/second_prog/third_prog/target/debug/third_prog: /workspaces/rust/first_project/second_prog/third_prog/src/garden.rs /workspaces/rust/first_project/second_prog/third_prog/src/main.rs
